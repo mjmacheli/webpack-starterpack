@@ -1,11 +1,22 @@
-import React, {Component} from 'react'
 import {render} from 'react-dom'
+import React from 'react'
+import {BrowserRouter,Switch,Route} from 'react-router-dom'
 
-import './app.scss'
+import Home from './components/Home'
+import About from './components/About'
+import Error from './components/Error'
 
-class App extends Component {
-  render() {
-    return(<h1> Hello from React!!</h1>)
-  }
+const App = () => {
+  return(
+    <main>
+      <Switch>
+        <Route path='/' component={Home} exact/>
+        <Route path='/home' component={Home} exact/>
+        <Route path='/about' component={About} exact/>
+        <Route component={Error} />
+      </Switch>
+    </main>
+  )
 }
-render(<App/>, document.getElementById('root'))
+
+render(<BrowserRouter><Home/></BrowserRouter>, document.getElementById('root'))
