@@ -5,7 +5,7 @@ import './app.scss'
 
 class App extends Component {
   render() {
-    return(<h1> Hello from React With auto html</h1>)
+    return(<h1> Hello from React!!</h1>)
   }
 }
 render(<App/>, document.getElementById('root'))

@@ -13,7 +13,7 @@ const config = {
   },
   output: {
     path: BUILD_DIR,
-    filename: '[name].[contenthash].js'
+    filename: '[name].[hash].js'
   },
   module: {
     rules: [
@@ -53,9 +53,14 @@ const config = {
     }
   },
   devServer: {
-    contentBase: './dist',
+    contentBase: [BUILD_DIR],
+    index: 'index.html',
+    compress: true,
+    hot: true,
     port: 3000,
-    open: true
+    watchOptions: {
+      poll: true
+    },
   }
 }
 
