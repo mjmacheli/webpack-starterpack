@@ -1,8 +1,12 @@
 import React from 'react'
 
+// import './load.scss'
+
 const Loading = () => {
   return(
-    <h1>Loading...</h1>
+    <div>
+      <h1>Loading...</h1>
+    </div>
   )
 }
 
