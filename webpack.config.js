@@ -57,7 +57,8 @@ const config = {
     index: 'index.html',
     compress: true,
     hot: true,
-    port: 3000,
+    port: 3030,
+    historyApiFallback: true,
     watchOptions: {
       poll: true
     },

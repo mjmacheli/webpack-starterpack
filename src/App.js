@@ -1,22 +1,23 @@
-import {render} from 'react-dom'
+import ReactDOM from 'react-dom'
 import React from 'react'
-import {BrowserRouter,Switch,Route} from 'react-router-dom'
+import {BrowserRouter as Router ,Switch,Route} from 'react-router-dom'
 
 import Home from './components/Home'
 import About from './components/About'
 import Error from './components/Error'
+import Menu from './components/Menu'
+import Loading from './components/Loading'
 
-const App = () => {
-  return(
+ReactDOM.render(
+  <Router>
     <main>
+      <Menu/>
       <Switch>
         <Route path='/' component={Home} exact/>
-        <Route path='/home' component={Home} exact/>
-        <Route path='/about' component={About} exact/>
+        <Route path='/home' component={Home}/>
+        <Route path='/about' component={About}/>
         <Route component={Error} />
       </Switch>
     </main>
-  )
-}
-
-render(<BrowserRouter><Home/></BrowserRouter>, document.getElementById('root'))
+  </Router>,
+document.getElementById('root'))
