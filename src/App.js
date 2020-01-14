@@ -6,16 +6,18 @@ import Home from './components/Home'
 // import About from './components/About'
 import Error from './components/Error'
 import Menu from './components/Menu'
+// import admin from './components/admin/c'
 
 let About = lazy(() => import('./components/About'))
 
 ReactDOM.render(
   <Router>
-  <Menu/>
+  {/* <Menu/> */}
     <main>
       <Switch>
         <Route path='/' component={Home} exact/>
         <Route path='/home' component={Home}/>
+        {/* <Route path='/admin' component={admin}/> */}
         <Suspense fallback={<h1>------------------------Heloo world-----------------------------------------</h1>}>
           <Route path='/about' component={About}/>
         </Suspense>
