@@ -9,7 +9,7 @@ const config = {
   mode: 'development',
   devtool: 'source-map',
   entry: {
-    bundle: APP_DIR + '/App.js',
+    bundle: APP_DIR + '/Index.js',
   },
   output: {
     path: BUILD_DIR,

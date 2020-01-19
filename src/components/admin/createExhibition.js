@@ -2,11 +2,8 @@ import React, {lazy,Suspense, Component} from 'react'
 
 
 class createExhibition extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
+  state = {
 
-    }
   }
 
   render(){
